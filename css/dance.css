@@ -1,0 +1,310 @@
+@import url('');
+body{
+    
+    /* background: url('img/yogaBg.webp'); */
+    background-color: #815bff;   /*rgb(254,248,76);*/
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* height: 1000px; */
+    font-family:sans-serif ;
+    
+}
+*{
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    text-decoration: none;
+
+}
+
+header{
+    height: 80px;
+    background: #000000;
+    border-radius: 13px;
+/* below code is to fix nav bar while scrolling */
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #000000; 
+  z-index: 1000; /* set a high z-index value to ensure it appears on top of other elements */
+  padding: 0px; 
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  height: 80px;
+    
+}
+nav img{
+    width: 250px;
+    position: absolute;
+    left: 5%;
+    height: 80px;
+}
+nav ul{
+    float: right;
+    margin-right: 25px;    
+}
+nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 15px;
+}
+nav ul li a{
+    position: relative;
+    color: rgb(255, 255, 255);
+    font-size: 18px;
+    padding: 5px 0;
+    text-transform: uppercase ;
+}
+nav ul li a:before{
+    position: absolute;
+    content:'';
+    left:0;
+    bottom:0;
+    height: 3px;
+    width: 100%;
+    background: rgb(255, 255, 255);
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform .4s linear;
+}
+nav ul li a:hover:before{
+    transform: scaleX(1);
+    transform-origin: left;
+}
+label #btn,
+label #cancel{
+    color:white;
+    font-size: 30px;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+#check{
+    display: none;
+}
+@media (max-width: 1118px) {
+    nav img{
+        /* left: 3%; 8% */
+          /* after self analysis */
+        width: 150px;
+        position: static; /* or use relative positioning */
+        left: 3%;
+    }
+}
+@media (max-width: 944px) {
+    nav img{
+         /* left: 6%;  6% */
+        top: 20px;
+        width: 130px;
+        /* after self analysis */
+        width: 100px;
+        left: 2%;
+        top: 10px;
+    }
+    nav ul li a{
+        font-size: 17px;
+    }
+}
+@media (max-width: 860px) {
+   label #btn{
+        display:block;
+   }
+   ul{
+            position: fixed;
+            width: 100%;
+            height: 100vh;
+            background: #000000;
+            top:80px;
+            left: -100%;
+            text-align: center;
+            transition: all .5s;
+
+    }
+    nav ul li{
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+   
+    nav ul li a{
+        font-size: 20px;
+    }
+    #check:checked~ul{
+        left: 0;
+    }
+    #check:checked~label #btn{
+        display: none;
+
+    }
+    #check:checked~label #cancel{
+        display: block;
+    }
+}
+/* below code for float wala code for dance page */
+/* below text for greeting text */
+.container {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    height: auto;
+    width: 100%;
+    margin-top: 10%;
+  }
+  
+  .dancetext-container0,
+  .dancetext-container1,
+  .dancetext-container2 {
+    position: relative;
+    width: 30%;
+    margin: 0 5px;
+    z-index: 1;
+    font-size: 22px;
+    border: 3px solid #000000;
+    border-radius: 13px;
+    padding: 10px;
+    box-sizing: border-box;
+    height: auto;
+  }
+  .dancetext-container0 {
+    width: auto;
+    left: 14%;
+    height: calc(100% - 46px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .dancetext-container0 span {
+    display: block;
+    text-align: center;
+  }
+  .container .dancetext-container0 h1{
+    color: #03b79f;
+    font-size: 70px;
+   
+    text-shadow:
+    -2px -2px 0 #000000,
+     2px -2px 0 #000000,
+    -2px  2px 0 #000000,
+     2px  2px 0 #000000;
+  }
+  
+  .dancetext-container1 {
+    position: absolute;
+    top: 50%;
+    left: 22%;
+    transform: translate(0%, -50%);
+    background: #9fc0c8;
+  }
+  
+  .dancetext-container2 {
+    position: absolute;
+    top: 50%;
+    right: 16%;
+    transform: translate(0%, -50%);
+    background: #bcc2ac;
+  }
+  #danceheading1,#danceheading2{
+    padding: 10px 10px 5px 5px;
+    
+  }
+  #dancepara1,#dancepara2{
+    padding: 5px;
+    text-align:start;
+  }
+  
+/* below is cards from dance file */
+
+.cardcontainer{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 5%;
+  }
+  .card{
+    background: #9fc0c8;
+    width: 360px;  /*270px*/
+    /* height: 350px; remove it when overflow content */
+    margin: 10px;
+    margin-top: 10%;
+    /* below 2 line code is for black border */
+    /* border: 3px solid #000000; */
+    /* border-radius: 15px; */
+  }
+  .card2{
+    background: #bcc2ac;
+  }
+  .card-image{
+    /* background-color: #000000; */
+    height: 400px;  /*170px*/
+    margin-bottom: 15px;
+    background-size: cover;
+    /* border-radius: 15px 15px 0 0; */
+  }
+  .card p{
+    padding: 10px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 300;
+    text-align: start;
+  }
+  .card h2{
+    text-align: center;
+    font-family: 'Tilt Warp', cursive;
+    font-weight:800;
+  }
+  .card-1{
+    background-image: url('img/dance/bharatnatyam.jpg');
+  }
+  .card-2{
+    background-image: url('img/dance/kathak.jpg');
+    
+  }   
+  .card-3{
+    background-image: url('img/dance/odissi.jpg');
+  }
+  .card-4{
+    background-image: url('img/dance/manipuri.jpg');
+  }
+  .card-5{
+    background-image: url('img/dance/kuchipudi.jpg');
+  }
+  .card-6{
+    background-image: url('img/dance/mohiniyattam.jpg');
+  }
+  .card-7{
+    background-image: url('img/dance/kathakali.jpg');
+  }
+  .card-8{
+    background-image: url('img/dance/Bhangra.jpg');
+  }
+  .card-9{
+    background-image: url('img/dance/Garba.jpeg');
+  }
+  .card-10{
+    background-image: url('img/dance/dandiya.jpeg');
+  }
+  .card-11{
+    background-image: url('img/dance/lavani.webp');
+  }
+  .card-12{
+    background-image: url('img/dance/bihuDance.jpeg');
+  }
+  .card-13{
+    background-image: url('img/dance/chhau.jpeg');
+  }
+  .card-14{
+    background-image: url('img/dance/ghoomar.jpg');
+  }
+  .card-15{
+    background-image: url('img/dance/giddha.jpeg');
+  }
+  .card-16{
+    background-image: url('img/dance/yakshagana.jpeg');
+  }
+  .card-17{
+    background-image: url('img/dance/kalbelia.jpeg');
+  }
+  
+  

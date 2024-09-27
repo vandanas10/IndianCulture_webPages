@@ -1,0 +1,234 @@
+@import url('https://kit.fontawesome.com/f1e7570d36.js');
+body{
+    
+    background: url('img/yogaBg.webp');
+    background-position: center;
+    background-repeat:no-repeat;
+    background-size: cover;
+    height: 1000px; /*1000px*/
+    font-family:sans-serif ;
+
+    
+}
+*{
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    text-decoration: none;
+
+}
+
+header{
+    height: 80px;
+    background: #000000;
+    border-radius: 13px;
+/* below code is to fix nav bar while scrolling */
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #000000; 
+  z-index: 1000; /* set a high z-index value to ensure it appears on top of other elements */
+  padding: 0px; 
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  height: 80px;
+    
+}
+nav img{
+    width: 250px;
+    position: absolute;
+    left: 5%;
+    height: 80px;
+}
+nav ul{
+    float: right;
+    margin-right: 25px;    
+}
+nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 15px;
+}
+nav ul li a{
+    position: relative;
+    color: rgb(255, 255, 255);
+    font-size: 18px;
+    padding: 5px 0;
+    text-transform: uppercase ;
+}
+nav ul li a:before{
+    position: absolute;
+    content:'';
+    left:0;
+    bottom:0;
+    height: 3px;
+    width: 100%;
+    background: rgb(255, 255, 255);
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform .4s linear;
+}
+nav ul li a:hover:before{
+    transform: scaleX(1);
+    transform-origin: left;
+}
+label #btn,
+label #cancel{
+    color:white;
+    font-size: 30px;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+#check{
+    display: none;
+}
+@media (max-width: 1118px) {
+    nav img{
+        /* left: 3%; 8% */
+          /* after self analysis */
+        width: 150px;
+        position: static; /* or use relative positioning */
+        left: 3%;
+    }
+}
+@media (max-width: 944px) {
+    nav img{
+         /* left: 6%;  6% */
+        top: 20px;
+        width: 130px;
+        /* after self analysis */
+        width: 100px;
+        left: 2%;
+        top: 10px;
+    }
+    nav ul li a{
+        font-size: 17px;
+    }
+}
+@media (max-width: 860px) {
+   label #btn{
+        display:block;
+   }
+   ul{
+            position: fixed;
+            width: 100%;
+            height: 100vh;
+            background: #000000;
+            top:80px;
+            left: -100%;
+            text-align: center;
+            transition: all .5s;
+
+    }
+    nav ul li{
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+   
+    nav ul li a{
+        font-size: 20px;
+    }
+    #check:checked~ul{
+        left: 0;
+    }
+    #check:checked~label #btn{
+        display: none;
+
+    }
+    #check:checked~label #cancel{
+        display: block;
+    }
+}
+/* yoga details*/
+
+body {
+    background-image: url("img/yogaBg.webp");
+  }
+  
+.text-container {
+    position: absolute;
+    top: 76%; 
+    left: 80%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    font-size: 20px;
+    
+  }
+#yogaheading{
+    text-align: center;
+    font-family: 'Tilt Warp', cursive;
+}
+#yogapara{
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 300;
+}
+/* slider code in separate css file below */
+
+/* below code for footer */
+ .foot-section{
+  height: 100px; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  position:absolute;
+  left: 0;
+  width: 100%;
+  z-index: 5;
+  top:240%;
+  }
+  .foot-section a{
+    height:40px;
+    width:40px;
+    border-radius:20px;
+    text-align:center;
+    margin:10px;
+    background-color:#f5f6fa;
+    box-shadow: 1px 4px 2px 2px #888585;
+    font-size: 25px;
+    line-height: 44px;
+  }
+  a .i{
+    transition:all 0.3s linear;
+  }
+  a:hover i{
+    transform:scale(0.8);
+  }
+  .fa-facebook{
+    color:#3b5998;
+  }
+  .fa-instagram{
+    color:#f752aa;
+  }.fa-twitter{
+    color:#00acee;
+  }.fa-linkedin{
+    color:#0077b5;
+  } 
+ /*  .foot-section {
+    height: 100px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    position:absolute;
+    left: 0;
+    width: 100%;
+    z-index: 5;
+    top:240%;
+  }
+  
+  .foot-section a {
+    margin: 0 20px; 
+    color: white;
+    font-size: 24px;
+  }
+  
+  .foot-section a:hover {
+    color: #CCCCCC; 
+  }/*
+  
